@@ -14,7 +14,7 @@ pipeline {
         stage('Test') { 
             steps {
                 echo "Testing"
-                cd "javatest"
+                dir ("javatest")
                 bat "javac HelloWorld.java"
                 bat "java HelloWorld"
             }
