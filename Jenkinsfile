@@ -14,9 +14,10 @@ pipeline {
         stage('Test') { 
             steps {
                 echo "Testing"
-                dir ("javatest")
-                bat "javac HelloWorld.java"
-                bat "java HelloWorld"
+                dir ("javatest") {
+                    bat "javac HelloWorld.java"
+                    bat "java HelloWorld"
+                }
             }
         }
         stage('Deploy') { 
