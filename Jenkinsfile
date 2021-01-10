@@ -18,5 +18,10 @@ pipeline {
                 echo "Deploying" 
             }
         }
+        post { 
+        always { 
+            cleanWs()
+        }
+    }
     }
 }
