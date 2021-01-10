@@ -1,6 +1,11 @@
 pipeline {
     agent any 
     stages {
+        stage('CleanWorkspace') {
+            steps {
+                cleanWs()
+            }
+        }
         stage('Clone repo') { 
             steps {
                 bat "git clone https://github.com/codeathand/javatest.git"
